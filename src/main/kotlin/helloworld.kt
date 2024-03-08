@@ -25,6 +25,16 @@ fun main() {
         println("Condition of immutable age is NOT met.")
     }
 
+    val doubleVal: Double = 1.78
+    val floatVal: Float = 1.78F
+    val booleanVal: Boolean = true
+
+    val character: Char = 'A'
+    val str: String = "String"
+    val longstr: String = "This is a $str"
+
+    val anyTypeVal: Any
+
     val isEnabled = true
     when(isEnabled){
         false -> println("isEnabled off")

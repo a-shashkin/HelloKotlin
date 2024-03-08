@@ -11,6 +11,28 @@ fun main() {
         println()
     }
 
+    var counter: Int = 10
+    while (counter > 0) {
+        println(counter)
+        counter--
+    }
+
+    var secondCounter: Int = 10
+    do {
+        println(counter)
+        counter--
+    } while (secondCounter > 0)
+
+    for (n in 1..8) {
+        if(n == 5) continue
+        println(n * n)
+    }
+
+    for (n in 1..5) {
+        if(n == 5) break
+        println(n * n)
+    }
+
     showMessage("Hello Kotlin")
     showMessage()
 }
