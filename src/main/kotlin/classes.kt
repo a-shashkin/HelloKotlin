@@ -14,9 +14,11 @@ fun main() {
     val alice: typePerson = typePerson("Alice")
 
     val charles: anotherTypePerson = anotherTypePerson("Charles", 30)
+
+    val employee: Employee = Employee()
 }
 
-class Person {
+open class Person {
     var name: String = "Undefined"
     var age: Int = 18
 
@@ -33,18 +35,26 @@ class Person {
     }
 }
 
-class typePerson(_name: String) {
+class Employee: Person() {}
+
+open class typePerson(_name: String) {
     val name: String
     init {
         name = _name
     }
 }
 
-class anotherTypePerson(_name: String){
+class typeEmployee(employeeName: String): typePerson(employeeName)
+
+open class anotherTypePerson(_name: String){
     val name: String = _name
     var age: Int = 0
 
     constructor(_name: String, _age: Int) : this(_name){
         age = _age
     }
+}
+
+class anotherTypeEmployee: anotherTypePerson{
+    constructor(employeeName: String) : super(employeeName)
 }
